@@ -6,7 +6,6 @@ import { HomePage } from './pages/HomePage';
 import { TabsPage } from './pages/TabsPage';
 import { NotFound } from './pages/NotFound';
 import { Navbar } from './components/Navbar';
-import { useEffect } from 'react';
 
 export const tabs = [
   { id: 'tab-1', title: 'Tab 1', content: 'Some text 1' },
@@ -15,14 +14,6 @@ export const tabs = [
 ];
 
 export const App = () => {
-  useEffect(() => {
-    document.documentElement.classList.add('has-navbar-fixed-top');
-
-    return () => {
-      document.documentElement.classList.remove('has-navbar-fixed-top');
-    };
-  }, []);
-
   return (
     <>
       {/* Also requires <html class="has-navbar-fixed-top"> */}
